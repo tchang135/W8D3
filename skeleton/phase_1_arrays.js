@@ -21,5 +21,15 @@
 //     return sums
 // }
 
-
-
+Array.prototype.transpose = function() {
+    var new_arr = [] 
+    for (var i = 0; i < this[0].length; i++) {
+        new_arr.push([])
+    };
+    for (var i = 0; i < this[0].length; i++) {
+        for (var j = 0; j < this.length; j++) {
+            new_arr[i].push(this[j][i])
+        }
+    };
+    return new_arr
+}
